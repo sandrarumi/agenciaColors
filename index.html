@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites profissionais responsivos, loja virtual, UX Design - Agência Colors </title>
+    <meta name="description" content="Criação profissional de sites responsivos, lojas virtuais, interface, aplicativos e muito mais. Surpeenda-se com a Agência Colors">
+    <meta name="keywords"content="site, site responsivo, criação de site, ux design, loja virtual">
+
+    <!-- FAVICON  -->
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div>
+            <p><a href="index.html" title="página inicial"><img src="imagens/logo-colors.png" alt="Logo Agência Colors"></a></p></div>  
+        
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="#produto" title="Produtos da Agência Colors">Produto</a></li>
+                <li><a href="#ux" title="Criação de Interface com foco em UX">UX Desing</a></li>
+                <li><a href="#motion" title="motion design">Motion</a></li>
+                <li><a href="#brand" title="brand">Brand</a></li>
+                <li><a href="#print" title="Print">Print</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+        
+    <section id="produto">
+            <div class="conteudo">
+            <h1>PRODUTO</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus aut est dolores error!</p>
+            <p><a href="#"title="" class="cta bt-verde-agua">SAIBA MAIS</a></p><!-- esse cta eh uma chamada tipo veja mais , usa esse ao inves do botao-->
+        </div>
+        </section>
+
+        <section id="ux">
+            <div class="conteudo">
+            <h1>UX DESING</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus aut est dolores error!</p>
+            <p><a href="#"title="" class="cta">SAIBA MAIS</a></p><!-- esse cta eh uma chamada tipo veja mais -->
+        </div>
+        </section>
+
+        <section id="motion">
+            <div class="conteudo">
+            <h1>MOTION</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus aut est dolores error!</p>
+            <p><a href="#"title="" class="cta bt-verde-agua">SAIBA MAIS</a></p><!-- esse cta eh uma chamada tipo veja mais -->
+        </div>
+        </section>
+
+        <section id="brand">
+            <div class="conteudo">
+            <h1>BRAND</h1>
+            <p class="texto-cinza">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus aut est dolores error!</p>
+            <p><a href="#"title="" class="cta">SAIBA MAIS</a></p><!-- esse cta eh uma chamada tipo veja mais -->
+        </div>
+        </section>
+
+        <section id="print">
+            <div class="conteudo">
+            <h1>PRINT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus aut est dolores error!</p>
+            <p><a href="#"title="" class="cta">SAIBA MAIS</a></p><!-- esse cta eh uma chamada tipo veja mais -->
+        </div>
+        </section>
+        
+        <!-- botao de whatsapp flutuante -->
+        <div class="whats">
+            <a href="https://api.whatsapp.com/send?phone=5511984481582&text=Mande%20uma%20mensagem." title="mensagem via WhatsApp"><img src="imagens/logo_whats.png" alt="logo WhatsApp"></a></div>
+        
+        <!-- Barra de acessibilidade -->
+        <div id="acessibilidade">
+        <button onclick="tamTexto(-4)">-</button>
+        <button onclick="tamTexto(18)">Reset</button>
+        <button onclick="tamTexto(+4)">+</button>
+        </div>
+
+
+        <script>
+            let fonte = 18;
+            
+            // definindo a função que muda o tamanho do texto
+            function tamTexto(contador) {
+                if (contador == 18) {
+                    fonte = contador;
+                } else {
+                    fonte += contador;
+                }
+
+                //limitando o tamanho do texto
+                if (fonte >= 60){
+                    fonte = 80;
+                } else if (fonte<8) {
+                    fonte = 10;
+                }
+
+                // definindo o tamanho da fonte no conteúdo
+                document.querySelector("body").style.fontSize = fonte + "px";
+            }
+
+        </script>
+       
+       
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap');
+/*
+
+Texto corrido: font-family: 'Merriweather', serif;
+
+Título: font-family: 'Oswald', sans-serif;
+
+*/
+
+/* Ajuste do Box Model pra tudo */
+*, *::after, *::before { box-sizing: border-box;}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;/* faz a rolagem do menu entre as areas das paginas */
+    scroll-padding-top: 70px;/* qdo vc scrollar essa propriedade nao come o título do texto qdo clica no menu -explicacao 5/10 no 01:48 */
+
+}
+
+img, iframe {/* deixar as imagens responsivas */
+    max-width: 100%;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif; 
+
+}
+
+header {
+    text-align: center;
+    background-color: white;
+    position: sticky;
+    top: 0; /* o position e o stick deixam o menu fixo na pagina, tem que usar os dois */  
+    padding-bottom: 0.1rem;
+   
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+nav a{/* aqui ta formatando o menu e o retangulo em volta dele para que o clique tenha mais folga */
+    text-decoration: none;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    /* background: crimson; */
+    padding: .5rem .7rem;
+    transition: all 0.6s
+}
+
+nav a:hover, nav a:active { /* qdo passar o mouse por cima ou qdo o usuario clicar */
+    background: #26ccca;
+    color: white;
+    /* qdo o clicar o menu o fundo fica azul e a letra muda pra branco */
+
+}
+
+section {
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    
+}
+
+.conteudo {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+section h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    line-height: 1.9rem;/* configura o espaço entre as linhas */
+}
+
+/* Formatando os botões das sections */
+
+.cta {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;/* aumenta o espaço entre as letras */
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: rgb(255, 239, 60);
+    padding: 1.15rem 1.8rem;
+    line-height: 5.5rem;
+    color: black;
+}
+/* esse comando ::before eh pra vc colocar algum elemento aqui no css ao inves de mexer no html */
+.cta::before {
+    content: "+";
+    margin-top: .8rem;
+    font-weight: 600;
+}
+
+/* classe para deixar o link / botão verde água */
+.bt-verde-agua {
+    background: #26ccca;
+    color: white;
+}
+/* aqui ele posiciona o background para aparecer o produto */
+#produto {
+    background-image: url(imagens/background1.png);
+    background-size: cover;
+    background-position-x: center ;
+}
+
+#ux {
+    color: white;
+    background-image: url(imagens/background2.png);
+}
+
+#motion {
+    background-image: url(imagens/background3.png);
+    background-size: cover;
+    background-position-x: center ;
+}
+
+#brand {
+    color: white;
+    background-image: url(imagens/background4.png);
+}
+
+.texto-cinza {
+    color:g#999;
+}
+
+#print {
+    background-image: url(imagens/background5.png);
+    background-size: cover;
+    background-position-x: center ;
+    color: #fff;
+    
+}
+
+/* fazendo o botao do whats flutuar ou fixar do lado direito abaixo mesmo com rolamento */
+.whats {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 4px #fff solid;
+    border-radius: 50%;
+    filter: drop-shadow(3px 3px 20px green );
+
+}
+
+
+#acessibilidade {
+  position: fixed;
+  right: 0;
+  bottom: 250px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#acessibilidade buttom {
+    background-color: black;
+    color: yellow;
+    color:whitesmoke;
+    border: 1px red;
+    margin-top: 2px;
+    width: 40px;
+    height: 30px;
+}
+
+/* Formatando para telas acima de 700px */
+@media screen and (min-width: 700px) {
+    body {
+        background-color: rgb(255, 239, 60);
+       
+    
+}
+
+.conteudo {
+    width: 50%;
+    max-width: 800px;
+    margin: 0;
+    margin-left: 4rem;
+}
+    /* usar isso abaixo pra mudar a frase do steve jobs, aumenta a letra em telas maiores */
+section h1 {
+    font-size: 5rem;
+    margin-bottom: -0.6rem;
+}
+
+#produto, #motion, #print {
+    background-attachment: fixed;
+}
+
+header {/* aqui em tela maiores o logo fica do lado esquerdo e o menu fica do lado do logo */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    
+}
+
+header div {
+    width: 25%;
+}
+
+header nav {/* espaco entre as palavras do menu */
+    width: 65%;
+    max-width: 800px;
+}
+
+nav a {
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+}
+
+}
